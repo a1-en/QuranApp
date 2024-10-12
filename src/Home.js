@@ -11,7 +11,7 @@ const Home = () => {
 
   const fetchQuranData = async () => {
     try {
-      const response = await fetch('http://api.alquran.cloud/v1/quran/ar.alafasy');
+      const response = await fetch('https://api.alquran.cloud/v1/quran/ar.alafasy');
       const data = await response.json();
       return data;
     } catch (error) {
@@ -66,7 +66,7 @@ const Home = () => {
     }
 
     try {
-      const response = await fetch(`http://api.alquran.cloud/v1/search/${searchKeywordValue}/all/en`);
+      const response = await fetch(`https://api.alquran.cloud/v1/search/${searchKeywordValue}/all/en`);
       const searchData = await response.json();
 
       if (searchData && searchData.data && searchData.data.matches) {
